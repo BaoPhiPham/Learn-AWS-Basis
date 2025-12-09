@@ -1,7 +1,6 @@
 baseURL = "https://github.com/BaoPhiPham/Learn-AWS-Basis"
 relativeURLs = true
 canonifyURLs = true
-publishDir = "public"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
@@ -16,7 +15,7 @@ home = [ "HTML", "RSS", "JSON"]
   # Git hub repo link
   editURL = ""
   description = ""
-  author = "ngannnkse182088@fpt.edu.vn"
+  author = "phipbse185046@fpt.edu.vn"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
@@ -26,6 +25,7 @@ home = [ "HTML", "RSS", "JSON"]
 title = "Internship Report"
 weight = 1
 languageName = "English"
+languageCode = "en"
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-facebook'></i> AWS Study Group"
@@ -37,6 +37,7 @@ weight = 20
 title = "Báo cáo thực tập"
 weight = 2
 languageName = "Tiếng Việt"
+languageCode = "vi"
 
 [[Languages.vi.menu.shortcuts]]
 name = "<i class='fab fa-facebook'></i> AWS Study Group"
