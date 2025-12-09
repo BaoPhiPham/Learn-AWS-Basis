@@ -1,4 +1,4 @@
-baseURL = "https://sharonng1029.github.io/fcj-fall2025-internship-report/"
+baseURL = "https://github.com/BaoPhiPham/Learn-AWS-Basis"
 relativeURLs = true
 canonifyURLs = true
 publishDir = "public"
