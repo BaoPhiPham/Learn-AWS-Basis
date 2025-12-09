@@ -1,59 +1,52 @@
 ---
 title: "Worklog Tuần 11"
-date: 2025-09-09
-weight: 2
+date: 2025-11-16
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 11:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Setup Project Frontend.
+- Tích hợp Authentication (Cognito).
+- Tham gia sự kiện DevOps.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| **Ngày** | **Nhiệm vụ**                                                                                                                   | **Bắt đầu** | **Hoàn thành** | **Tài liệu tham khảo**                                                                                          |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------ | ----------- | -------------- | --------------------------------------------------------------------------------------------------------------- |
+| 2        | - **EVENT:** Tham gia AWS Cloud Mastery Series #2 – DevOps on AWS.<br>- Tìm hiểu CI/CD (CodePipeline).                         | 18/11/2025  | 18/11/2025     | [AWS Cloud Mastery Series #2](../../4-eventparticipated/4.4-event4/)                                            |
+| 3        | - Thiết kế Database Schema (DynamoDB JSON).<br>- Gửi thiết kế cho Backend team.                                                | 19/11/2025  | 19/11/2025     | [DynamoDB Best Practices](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/best-practices.html) |
+| 4        | - Khởi tạo Project React + TypeScript (Vite).<br>- Config Tailwind, ESLint, Git repo.                                          | 20/11/2025  | 20/11/2025     | [Vite Guide](https://vitejs.dev/guide/) <br> [TypeScript Handbook](https://www.typescriptlang.org/docs/)        |
+| 5        | - Code UI Login Page.<br>- Validate form với React Hook Form + Zod.                                                            | 21/11/2025  | 21/11/2025     | [React Hook Form](https://react-hook-form.com/get-started) <br> [Zod Validation](https://zod.dev/)              |
+| 6        | - Cấu hình **Amazon Cognito** (User Pool).<br>- Tích hợp thư viện Amplify Auth.<br>- Nối API Login thành công (Lấy JWT Token). | 22/11/2025  | 22/11/2025     | [Amplify Authentication](https://docs.amplify.aws/react/build-a-backend/auth/)                                  |
 
 ### Kết quả đạt được tuần 11:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+**1. Kiến thức DevOps trên AWS:**
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Tham gia **AWS Cloud Mastery Series #2** về DevOps on AWS, nắm được các dịch vụ CI/CD: **CodePipeline, CodeBuild, CodeDeploy**.
+- Hiểu quy trình tự động hóa triển khai (Continuous Integration/Continuous Deployment) giúp tăng tốc phát triển và giảm lỗi.
+- Áp dụng kiến thức vào dự án: Lên kế hoạch setup CI/CD pipeline để tự động deploy Frontend lên S3 + CloudFront.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+**2. Khởi tạo và cấu hình Frontend Project:**
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Setup project **React + TypeScript** với **Vite** (build tool nhanh hơn Create React App).
+- Cấu hình **Tailwind CSS** cho styling và **ESLint** cho code quality.
+- Tạo Git repository và thiết lập branch strategy (main, develop, feature branches).
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+**3. Phát triển tính năng Authentication:**
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+- Code hoàn thiện **Login Page UI** với form validation sử dụng **React Hook Form** (performance tốt) và **Zod** (type-safe validation).
+- Cấu hình **Amazon Cognito User Pool** để quản lý người dùng: Tạo User Pool, thiết lập password policy, email verification.
+- Tích hợp **AWS Amplify Auth** library vào React app.
+- **Kết nối thành công API Login**: Người dùng nhập email/password → Cognito xác thực → Trả về JWT Token → Lưu token vào localStorage để authenticate các API call tiếp theo.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+**4. Kỹ năng Security:**
 
+- Hiểu rõ luồng Authentication flow: Frontend (React) ↔ Cognito (Identity Provider) ↔ Backend (Lambda + API Gateway với Cognito Authorizer).
+- Áp dụng **Secure Architectures** vào thực tế: Sử dụng Cognito làm Identity Management thay vì tự code authentication (bảo mật hơn, tuân thủ best practices).
+- Nắm được cách làm việc với JWT Token và cách bảo vệ sensitive data trên Frontend.
 
+---

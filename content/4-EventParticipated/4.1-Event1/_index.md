@@ -1,126 +1,92 @@
 ---
 title: "Event 1"
-date: 2025-09-09
+date: 2025-09-06
 weight: 1
 chapter: false
-pre: " <b> 4.1. </b> "
+pre: "<b> 4.1. </b>"
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+# Summary Report: Kick-off AWS First Cloud Journey Workforce – OJT FALL 2025
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+## Event Objectives
 
-### Event Objectives
+- Officially launch the **AWS First Cloud Journey (FCJ)** program for the Fall 2025 cohort.
+- Provide a comprehensive roadmap of the program, setting expectations for real-world projects and On-the-Job Training (OJT).
+- Outline career orientations in high-demand fields: Cloud Computing, AI/GenAI, and DevOps.
+- Inspire interns by connecting them with mentors, successful alumni, and the broader AWS Vietnam community.
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+## Time & Venue
 
-### Speakers
+**Time:** 08:30 – 12:00, Saturday, September 06, 2025  
+**Venue:** 26th Floor, Bitexco Financial Tower, 2 Hai Trieu Street, Ben Nghe Ward, District 1, Ho Chi Minh City
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+## Speakers
 
-### Key Highlights
+**Program Leaders & Educators**
 
-#### Identifying the drawbacks of legacy application architecture
+- **Mr. Nguyen Tran Phuoc Bao** – Head of Corporate Relations, FPT University
+- **Mr. Nguyen Gia Hung** – Head of Solutions Architect, AWS Vietnam
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+**Industry Experts & Alumni Panel**
 
-#### Transitioning to modern application architecture – Microservices
+- **Do Huy Thang** – DevOps Lead, VNG
+- **Danh Hoang Hieu Nghi** – GenAI Engineer, Renova
+- **Bui Ho Linh Nhi** – AI Engineer, SoftwareOne
+- **Pham Nguyen Hai Anh** – Cloud Engineer, G-Asia Pacific
+- **Nguyen Dong Thanh Hiep** – Principal Cloud Engineer, G-Asia Pacific
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+## Key Highlights
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+### 1. The FCJ Vision & Impact
 
-#### Domain-Driven Design (DDD)
+- **Legacy:** Since 2021, FCJ has trained over **2,000 students**, creating a pipeline of **150+ alumni** currently working at top tech companies.
+- **Mission:** To build a high-quality generation of **AWS Builders** for Vietnam, capable of competing globally.
+- **Ecosystem:** The program is deeply connected to the **AWS Study Group (47,000+ members)**, providing a massive support network for new joiners.
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+### 2. Industry Insights & Career Accelerators
 
-#### Event-Driven Architecture
+- **Rapid Growth:** The sharing session highlighted how Alumni transitioned from Interns to roles like _Principal Cloud Engineer_ or _GenAI Engineer_ in just **1–3 years**.
+- **Key Trends:** The shift from traditional SysAdmin to modern roles requires a mix of **Cloud Native**, **Infrastructure as Code (IaC)**, and **Generative AI** skills.
+- **Recruitment Reality:** Employers are looking for "Builders" who can demonstrate practical project experience, not just certificate holders.
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+### 3. The "Builder" Mentality
 
-#### Compute Evolution
+- **Core Advice:** "Learn fast – build real projects – ask early – share more."
+- **Proactivity:** Success in the OJT program relies 80% on the intern's proactivity in seeking mentorship and solving problems independently before asking.
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+## Key Takeaways
 
-#### Amazon Q Developer
+### Mindset & Culture
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+- **Contribution Culture:** Knowledge grows when shared. Active participation in the community is the fastest way to learn.
+- **Fail Fast, Learn Faster:** Don't be afraid to break things in the lab environment. It's better to fail during OJT than in a production environment.
 
-### Key Takeaways
+### Career Strategy
 
-#### Design Mindset
+- **T-Shaped Skills:** Build a broad foundation in AWS services (Compute, Network, Storage) but develop deep expertise in one domain (e.g., Serverless or GenAI).
+- **Network is Net Worth:** The relationships built with mentors and peers in this program are future professional connections.
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+### Skill Orientation
 
-#### Technical Architecture
+- **Focus Areas:** The current market demands proficiency in **Serverless** (Lambda, API Gateway), **Terraform/CDK**, and **CI/CD pipelines**.
+- **Soft Skills:** Communication and documentation are just as critical as coding.
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+## Applying to Work
 
-#### Modernization Strategy
+- **Define Roadmap:** Set a clear goal for the 4-month internship: Achieve the **AWS Solutions Architect Associate** certification and complete one end-to-end capstone project.
+- **Portfolio Building:** Commit to documenting every weekly task and project milestone on GitHub and personal blogs (like this Hugo site).
+- **Mentorship Engagement:** Schedule bi-weekly checkpoints with the assigned mentor to review code quality and discuss architectural decisions for the _Student Management System_ project.
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+## Event Experience
 
-### Applying to Work
+The Kick-off event was more than just an orientation; it was a motivational booster.
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+- **Inspiration:** Hearing specific stories from alumni like **Nguyen Dong Thanh Hiep** (Principal Cloud Engineer) proved that a steep career trajectory is possible with the right focus.
+- **Atmosphere:** The energy at the AWS Office was palpable. Being surrounded by 300+ like-minded peers created a sense of belonging to a "technical elite" squad.
+- **Direct Connection:** I had the opportunity to listen directly to Mr. Nguyễn Gia Hưng, and his vision for Vietnam’s technology workforce truly motivated me to strive harder.
 
-### Event Experience
+## Event Photos
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
-
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
-
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
-
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+![All participants of the FCJ Fall 2025 kick-off](/images/4-EventParticipated/Event1_1.jpg)
+![Listening to the sharing from Nguyen Gia Hung – AWS Vietnam](/images/4-EventParticipated/Event1_2.jpg)
+![My photo taken at the event](/images/4-EventParticipated/Event1_3.jpg)

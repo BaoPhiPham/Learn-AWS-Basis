@@ -1,57 +1,51 @@
 ---
 title: "Week 5 Worklog"
-date: 2025-09-09
-weight: 1
+date: 2025-10-06
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 5 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn how to **monitor system performance** and collect logs using **Amazon CloudWatch**.  
+* Explore **AWS CloudTrail** to track API and user activities.  
+* Implement automatic alerts using **Amazon SNS**.  
+* Analyze **performance metrics** and respond promptly to scaling or system events.  
+* Practice building a **comprehensive monitoring solution** for AWS environments.
+
+---
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task                                                                                                                                                                                                                                                                                                                                | Start Date | Completion Date | Reference Material                                   |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ---------------------------------------------------- |
+| 2   | - Study **Amazon CloudWatch Metrics**.<br>- **Practice:**<br>&emsp;+ Monitor CPU, memory, and network metrics for EC2.<br>&emsp;+ Create **Dashboards** to visualize key metrics.<br><br>→ Gain a clear view of system health.                                                                                                      | 06/10/2025 | 06/10/2025      | [AWS Study Group](https://000024.awsstudygroup.com/) |
+| 3   | - Learn **CloudWatch Alarms**.<br>- **Practice:**<br>&emsp;+ Set alarms for CPU, Memory, Disk thresholds.<br>&emsp;+ Configure actions triggered when thresholds are crossed (e.g., SNS notifications).<br><br>→ Respond quickly to unusual events.                                                                                 | 07/10/2025 | 07/10/2025      | [AWS Study Group](https://000025.awsstudygroup.com/) |
+| 4   | - Explore **AWS CloudTrail**.<br>- **Practice:**<br>&emsp;+ Enable CloudTrail to log API calls.<br>&emsp;+ Review user activity and instance operations.<br><br>→ Track all system activity for security and compliance.                                                                                                            | 08/10/2025 | 08/10/2025      | [AWS Study Group](https://000026.awsstudygroup.com/) |
+| 5   | - Learn **Amazon SNS** for automated alerts.<br>- **Practice:**<br>&emsp;+ Create an SNS topic.<br>&emsp;+ Subscribe email and SMS endpoints.<br>&emsp;+ Connect CloudWatch Alarms to SNS.<br><br>→ Set up automatic alerting for system events.                                                                                    | 09/10/2025 | 09/10/2025      | [AWS Study Group](https://000027.awsstudygroup.com/) |
+| 6   | - Integrate **CloudWatch, CloudTrail, and SNS** into a complete monitoring solution.<br>- **Practice:**<br>&emsp;+ Monitor EC2, RDS, and ELB.<br>&emsp;+ Analyze logs and automate alerts.<br>&emsp;+ Simulate scaling and application failure scenarios to test response.<br><br>→ Build a robust operational and alerting system. | 10/10/2025 | 10/10/2025      | [AWS Study Group](https://000028.awsstudygroup.com/) |
 
-### Week 5 Achievements:
+---
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Week 5 Achievements
 
-* Successfully created and configured an AWS Free Tier account.
+#### 1. Amazon CloudWatch
+- Monitored and collected **metrics** for EC2, RDS, and ELB.  
+- Created **Dashboards** for visualizing key system metrics.  
+- Learned to configure alarms based on **thresholds** and evaluation periods.  
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### 2. CloudWatch Alarms & SNS
+- Configured **CloudWatch Alarms** for CPU, Memory, and Disk.  
+- Linked alarms to **SNS topics** for automatic email/SMS notifications.  
+- Verified alerting during abnormal events.  
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+#### 3. AWS CloudTrail
+- Enabled and configured **CloudTrail** for full API activity logging.  
+- Monitored user actions and system events.  
+- Improved security compliance and incident traceability.  
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+#### 4. Comprehensive Monitoring Solution
+- Integrated **CloudWatch, CloudTrail, and SNS** into a complete monitoring system.  
+- Analyzed logs and responded to scaling or failure events.  
+- Enhanced operational efficiency, alerting, and AWS environment governance.

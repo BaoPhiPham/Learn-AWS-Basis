@@ -1,58 +1,46 @@
 ---
 title: "Worklog Tuần 12"
-date: 2025-09-09
-weight: 2
+date: 2025-11-23
+weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 ### Mục tiêu tuần 12:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Phát triển UI Admin Dashboard.
+- Tìm hiểu Security nâng cao (WAF, Shield).
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| **Ngày** | **Nhiệm vụ**                                                                                  | **Bắt đầu** | **Hoàn thành** | **Tài liệu tham khảo**                                                                                                 |
+| -------- | --------------------------------------------------------------------------------------------- | ----------- | -------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| 2        | - Code Layout Admin (Sidebar, Header).<br>- Xây dựng các Reusable Components.                 | 24/11/2025  | 25/11/2025     | [React Component Patterns](https://react.dev/learn/passing-props-to-a-component)                                       |
+| 3        | - Code màn hình Dashboard Overview.<br>- Code màn hình Quản lý sinh viên (Table, Pagination). | 26/11/2025  | 27/11/2025     | —                                                                                                                      |
+| 4        | - Hoàn thiện UI Admin (Responsive).<br>- Hoàn thành giao diện Admin (Mock data).              | 28/11/2025  | 28/11/2025     | —                                                                                                                      |
+| 5        | - **EVENT:** Tham gia AWS Cloud Mastery Series #3 – Cloud Security Best Practices.            | 29/11/2025  | 29/11/2025     | [AWS Cloud Mastery Series #3](../../4-eventparticipated/4.5-event5/)                                                   |
+| 6        | - Refactor code, tối ưu Performance Frontend.<br>- Chuẩn bị tích hợp API.                     | 30/11/2025  | 30/11/2025     | [React Performance Optimization](https://react.dev/learn/render-and-commit) <br> [Web Vitals](https://web.dev/vitals/) |
 
 ### Kết quả đạt được tuần 12:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+**1. Phát triển giao diện Admin Dashboard:**
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Xây dựng hoàn chỉnh **Admin Layout** với Sidebar (navigation menu), Header (user profile, notifications).
+- Code **Dashboard Overview** hiển thị số liệu tổng quan: Tổng số sinh viên, số bài tập, tỷ lệ hoàn thành, biểu đồ thống kê.
+- Phát triển **màn hình Quản lý sinh viên** với Table (hiển thị danh sách), Pagination (phân trang), Search/Filter (tìm kiếm theo tên, lớp), CRUD actions (Thêm/Sửa/Xóa).
+- Thiết kế **Responsive**: Giao diện tự động điều chỉnh trên Desktop, Tablet, Mobile.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+**2. Kiến trúc Component & Code Quality:**
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Xây dựng **Reusable Components** tái sử dụng được.
+- **Refactor code** để tối ưu: Loại bỏ code trùng lặp, tổ chức folder structure rõ ràng (components/, pages/, hooks/, utils/).
+- Mock data để test UI trước khi Backend API sẵn sàng.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+**3. Kiến thức AWS Security nâng cao:**
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+- Tham gia **AWS Cloud Mastery Series #3** về Cloud Security Best Practices, học được các dịch vụ bảo mật: **AWS WAF** (Web Application Firewall), **AWS Shield** (DDoS Protection).
+- Hiểu cách WAF bảo vệ ứng dụng Web khỏi các cuộc tấn công phổ biến: **SQL Injection, XSS (Cross-Site Scripting), CSRF**.
+- Nắm được cách cấu hình WAF Rules để filter malicious requests, rate limiting để chống brute force attacks.
+- Áp dụng vào dự án: Lên kế hoạch tích hợp WAF với CloudFront để bảo vệ Frontend, Shield Standard (miễn phí) để chống DDoS cơ bản.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+---

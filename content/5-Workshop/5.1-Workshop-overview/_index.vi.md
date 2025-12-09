@@ -1,19 +1,25 @@
 ---
-title : "Giới thiệu"
-date :  2025-09-09 
-weight : 1
-chapter : false
-pre : " <b> 5.1. </b> "
+title: "Giới thiệu"
+date: "2025-12-07"
+weight: 1
+chapter: false
+pre: " <b> 5.1. </b> "
 ---
 
-#### Giới thiệu về VPC Endpoint
+**Serverless Student Management System** (SMS) là nền tảng quản lý sinh viên hiện đại, xây dựng hoàn toàn trên các dịch vụ serverless của AWS. Hệ thống này giúp các trường học hoặc doanh nghiệp nhỏ dễ dàng quản lý, phân tích, và tương tác với dữ liệu sinh viên ở quy mô từ nhỏ đến lớn mà không cần lo lắng về hạ tầng phần cứng.  
+Các thành phần serverless như Lambda, DynamoDB, API Gateway, Amplify, ROUTE53, CloudFront, WAF giúp hệ thống tự động mở rộng, tối ưu chi phí, duy trì độ tin cậy và bảo mật cao.
 
-+ Điểm cuối VPC (endpoint) là thiết bị ảo. Chúng là các thành phần VPC có thể mở rộng theo chiều ngang, dự phòng và có tính sẵn sàng cao. Chúng cho phép giao tiếp giữa tài nguyên điện toán của bạn và dịch vụ AWS mà không gây ra rủi ro về tính sẵn sàng.
-+ Tài nguyên điện toán đang chạy trong VPC có thể truy cập Amazon S3 bằng cách sử dụng điểm cuối Gateway. Interface Endpoint  PrivateLink có thể được sử dụng bởi tài nguyên chạy trong VPC hoặc tại TTDL.
+- Người dùng thao tác qua giao diện web (React/Amplify), tương tác với dashboard, bài tập, bảng điểm .
+- API backend (REST) đảm bảo truy cập dữ liệu sinh viên, quyền truy cập cá nhân hóa.
+- Không cần quản lý server truyền thống, toàn bộ quy trình triển khai vận hành – từ lưu trữ, xử lý, đến CI/CD – đều tích hợp và tự động hóa qua các dịch vụ AWS.
 
 #### Tổng quan về workshop
-Trong workshop này, bạn sẽ sử dụng hai VPC.
-+ **"VPC Cloud"** dành cho các tài nguyên cloud như Gateway endpoint và EC2 instance để kiểm tra.
-+ **"VPC On-Prem"** mô phỏng môi trường truyền thống như nhà máy hoặc trung tâm dữ liệu của công ty. Một EC2 Instance chạy phần mềm StrongSwan VPN đã được triển khai trong "VPC On-prem" và được cấu hình tự động để thiết lập đường hầm VPN Site-to-Site với AWS Transit Gateway. VPN này mô phỏng kết nối từ một vị trí tại TTDL (on-prem) với AWS cloud. Để giảm thiểu chi phí, chỉ một phiên bản VPN được cung cấp để hỗ trợ workshop này. Khi lập kế hoạch kết nối VPN cho production workloads của bạn, AWS khuyên bạn nên sử dụng nhiều thiết bị VPN để có tính sẵn sàng cao.
 
-![overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+Trong workshop này, bạn sẽ:
+
+- Khởi tạo và cấu hình các dịch vụ serverless core của AWS: DynamoDB, Lambda, API Gateway, Amplify, Cognito.
+- Xây dựng và kiểm thử hệ thống quản lý sinh viên với các tính năng: dashboard CRUD, giám sát chất lượng dịch vụ.
+- Trải nghiệm quy trình DevOps CI/CD tự động hóa từ GitLab lên AWS Pipeline, kiểm thử và demo live hệ thống.
+- Vận dụng kiến thức thực hành vào bài học thực tế hoặc các dự án tương tự, dễ dàng mở rộng sang môi trường mobile hoặc tích hợp AI nâng cao.
+
+![overview](/images/5-Workshop/5.1-Workshop-overview/solution.drawio.png)

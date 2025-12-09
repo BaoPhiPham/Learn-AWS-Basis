@@ -1,18 +1,27 @@
 ---
-title : "Introduction"
-date :  2025-09-09 
-weight : 1 
-chapter : false
-pre : " <b> 5.1. </b> "
+title: "Introduction"
+date: "2025-12-07"
+weight: 1
+chapter: false
+pre: " <b> 5.1. </b> "
 ---
 
-#### VPC endpoints
-+ **VPC endpoints** are virtual devices. They are horizontally scaled, redundant, and highly available VPC components. They allow communication between your compute resources and AWS services without imposing availability risks.
-+ Compute resources running in VPC can access  **Amazon S3**  using a Gateway endpoint. PrivateLink interface endpoints can be used by compute resources running in VPC or on-premises.
+**Serverless Student Management System** (SMS) is a modern student management platform, built entirely on AWS serverless services. This system helps schools or small businesses easily manage, analyze, and interact with student data on a small to large scale without worrying about hardware infrastructure.
+Serverless components such as Lambda, DynamoDB, API Gateway, Amplify, ROUTE53, CloudFront, WAF help the system automatically scale, optimize costs, maintain high reliability and security.
+
+- Users operate through the web interface (React/Amplify), interact with dashboards, assignments, and scoreboards.
+- API backend (REST) ensures access to student data, personalized access.
+
+- No need to manage traditional servers, the entire deployment and operation process – from storage, processing, to CI/CD – is integrated and automated through AWS services.
 
 #### Workshop overview
-In this workshop, you will use two VPCs. 
-+ **"VPC Cloud"** is for cloud resources such as a  **Gateway endpoint** and an EC2 instance to test with. 
-+ **"VPC On-Prem"** simulates an on-premises environment such as a factory or corporate datacenter. An EC2 instance running strongSwan VPN software has been deployed in "VPC On-prem" and automatically configured to establish a Site-to-Site VPN tunnel with AWS Transit Gateway. This VPN simulates connectivity from an on-premises location to the AWS cloud. To minimize costs, only one VPN instance is provisioned to support this workshop. When planning VPN connectivity for your production workloads, AWS recommends using multiple VPN devices for high availability.
 
-![overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+In this workshop, you will:
+
+- Initialize and configure AWS core serverless services: DynamoDB, Lambda, API Gateway, Amplify, Cognito.
+- Build and test a student management system with features: CRUD dashboard, service quality monitoring.
+- Experience the DevOps CI/CD process automated from GitLab to AWS Pipeline, test and demo live the system.
+
+- Apply practical knowledge to real lessons or similar projects, easily expand to mobile environments or integrate advanced AI.
+
+![overview](/images/5-Workshop/5.1-Workshop-overview/solution.drawio.png)

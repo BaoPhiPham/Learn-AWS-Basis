@@ -1,47 +1,55 @@
 ---
-title: "Sharing and Feedback"
-date: 2025-09-09
+title: "Sharing & Feedback"
+date: 2025-12-04
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
+alwaysopen: true
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+### General Evaluation
 
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud Journey program. This will help the FCJ team improve any shortcomings based on the following aspects:
+**1. Working Environment**
 
-### Overall Evaluation
+The environment at FCJ is highly dynamic and values a spirit of ownership. The working atmosphere is professional yet comfortable enough for me to openly exchange ideas with mentors. However, the noise level when crowded can be distracting at times, but the policy allowing headphones has effectively solved this issue.
 
-**1. Working Environment**  
-The working environment is very friendly and open. FCJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+**2. Support from Mentor / Team Admin**
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+The mentors are extremely dedicated and always available when support is needed. I highly appreciate that they encourage me to try and solve problems independently rather than just providing the answers immediately.
 
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+**3. Relevance between work and major**
 
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+The assigned tasks have a progressive level of difficulty, which is very suitable for the roadmap of a 3rd or 4th-year student. I have had the opportunity to apply foundational knowledge of Programming and Computer Networking learned at university to a real-world Cloud environment.
 
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
+**4. Learning opportunities & Skill development**
 
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+During the internship, I learned many new skills such as using project management tools, teamwork, and professional communication within a corporate environment. Mentors also shared a lot of practical experience, helping me better orient my future career path.
 
----
+**5. Culture & Team Spirit**
 
-### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+From the beginning of the First Cloud Journey, I was very impressed by the community's team spirit. Everyone respects one another; we work seriously but maintain a fun atmosphere. Support is given regardless of whether one is an intern or a full-time employee, which makes me feel like a true part of the collective.
 
----
+**6. Policies / Benefits for Interns**
 
-### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+I particularly enjoy the Workshops/Events organized by AWS; these help me and other students access new knowledge and gain opportunities to network with seniors in the field. Additionally, the Hybrid working model provides favorable conditions for time flexibility and comfort.
+
+### Other Questions
+
+- **What are you most satisfied with during the internship?**
+  I am most satisfied with the program's policies and regulations, which create very favorable conditions for participants. Additionally, the friendliness and readiness of mentors to help and answer questions is a highlight.
+
+- **What do you think the company needs to improve for future interns?**
+  The documentation is very deep and extensive, so I was quite confused in the beginning. I hope the team can update the guidance to provide a more detailed direction/roadmap.
+
+- **If you were to introduce this to friends, would you recommend interning here? Why?**
+  Definitely yes. This is an ideal place to experience work culture. The company organizes many events that provide both new knowledge and job opportunities for students. Especially, the mentors are all dedicated to answering questions and supporting students.
+
+### Proposals & Desires
+
+- **Do you have any suggestions to improve the internship experience?**
+  Since most interns are about to graduate, I suggest the team organize additional workshops/talkshows regarding Job Interviews, working experiences, or in-depth CV reviews. This would help interns review missing knowledge and feel more confident when applying for official positions at the company
+
+- **Do you want to continue this program in the future?**
+  Yes, I really hope to continue accompanying the First Cloud Journey program in the future.
+
+- **Other comments (feel free to share):**

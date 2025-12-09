@@ -1,59 +1,55 @@
 ---
 title: "Worklog Tuần 1"
-date: 2025-09-09
+date: 2025-09-08
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 1:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hiểu và triển khai các chiến lược **quản lý chi phí** bằng **AWS Budgets**.  
+* Nắm vững các khái niệm cốt lõi của **AWS Identity and Access Management (IAM)**, bao gồm người dùng (Users), nhóm (Groups) và vai trò (Roles).  
+* Xây dựng hạ tầng mạng đám mây **bảo mật và độc lập** bằng **Amazon VPC** kết hợp với **Site-to-Site VPN**.  
+* Khởi tạo, cấu hình và quản lý máy chủ ảo bằng **Amazon EC2**.  
+* Cấp quyền truy cập dịch vụ AWS cho ứng dụng chạy trên EC2 một cách an toàn thông qua **IAM Roles**.  
+
+---
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 08/09/2025   | 11/09/2025      |
-| 3   | - Tìm hiểu AWS qua các video Module 01: <br>&emsp;  + Module 01-01 - Điện Toán Đám Mây Là Gì ? <br>&emsp; + Module 01-02 - Điều Gì Tạo Nên Sự Khác Biệt Của AWS ? <br>&emsp; + Module 01-03 - Bắt Đầu Hành Trình Lên Mây Như Thế Nào. <br>&emsp; + Module 01-04 - Hạ Tầng Toàn Cầu Của AWS. <br>&emsp; + Module 01-05 - Công Cụ Quản Lý AWS Services. <br>&emsp; + Module 01-05 - Tối Ưu Hóa Chi Phí Trên AWS và Làm Việc Với AWS Support. <br> - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 09/09/2025   | 10/09/2025      | <https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i/><br><https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Ngày | Công việc                                                                                                                                                                                                                                                                                                                                                                                                      | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                       |
+| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ---------------------------------------------------- |
+| 2    | - Tìm hiểu cách theo dõi và kiểm soát chi phí AWS bằng **AWS Budgets**.<br>- Phân biệt các loại ngân sách khác nhau.<br>- **Thực hành:**<br>&emsp;+ Tạo **Cost Budget** để theo dõi tổng chi tiêu.<br>&emsp;+ Tạo **Usage Budget** để giám sát mức sử dụng dịch vụ cụ thể.<br>&emsp;+ Khám phá **Reservation & Savings Plans Budgets** để theo dõi cam kết sử dụng.                                            | 08/09/2025   | 08/09/2025      | [AWS Study Group](https://000007.awsstudygroup.com/) |
+| 3    | - Tìm hiểu các khái niệm cơ bản của IAM: Users, Groups, Policies, Roles.<br>- Tuân thủ các nguyên tắc bảo mật cho tài khoản root.<br>- **Thực hành:**<br>&emsp;+ Tạo **Admin Group** với quyền AdministratorAccess.<br>&emsp;+ Tạo **IAM User** mới và thêm vào nhóm Admin.<br>&emsp;+ Tìm hiểu cách tạo và sử dụng **IAM Role**.<br>&emsp;+ Thực hành tính năng **Switch Role**.                              | 09/09/2025   | 09/09/2025      | [AWS Study Group](https://000002.awsstudygroup.com/) |
+| 4    | - Học cách xây dựng mạng riêng ảo với **Amazon VPC**.<br>- Hiểu các thành phần của VPC: subnet, route table, internet gateway.<br>- **Thực hành:**<br>&emsp;+ Tạo VPC với subnet công khai và riêng tư.<br>&emsp;+ Cấu hình **Security Groups** làm tường lửa trạng thái.<br>&emsp;+ Khởi tạo EC2 trong VPC.<br>&emsp;+ Thiết lập kết nối **Site-to-Site VPN**.                                                | 10/09/2025   | 10/09/2025      | [AWS Study Group](https://000003.awsstudygroup.com/) |
+| 5    | - Làm quen với các khái niệm cốt lõi của **Amazon EC2**.<br>- Triển khai ứng dụng trên nhiều hệ điều hành khác nhau.<br>- **Thực hành:**<br>&emsp;+ Khởi tạo **Windows Server 2022** và kết nối qua RDP.<br>&emsp;+ Khởi tạo **Amazon Linux 2** và kết nối qua SSH.<br>&emsp;+ Triển khai ứng dụng quản lý người dùng trên cả hai hệ thống.<br>&emsp;+ Áp dụng chiến lược **giám sát và quản lý chi phí EC2**. | 11/09/2025   | 11/09/2025      | [AWS Study Group](https://000004.awsstudygroup.com/) |
+| 6    | - Hiểu lý do tại sao việc nhúng trực tiếp Access Key vào ứng dụng là rủi ro bảo mật.<br>- Tìm hiểu cách sử dụng **IAM Roles for EC2** để cấp quyền truy cập an toàn.<br>- **Thực hành:**<br>&emsp;+ Chuẩn bị S3 bucket và EC2 instance.<br>&emsp;+ Tạo **IAM Role** với quyền truy cập S3.<br>&emsp;+ Gắn Role vào EC2 instance.<br>&emsp;+ Kiểm tra ứng dụng có thể truy cập S3 mà không cần Access Key.      | 12/09/2025   | 12/09/2025      | [AWS Study Group](https://000048.awsstudygroup.com/) |
 
-### Kết quả đạt được tuần 1:
+---
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Kết quả đạt được trong tuần 1
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+#### Quản lý chi phí (Cost Management)
+- Tạo và cấu hình thành công **AWS Budgets** để theo dõi chi phí và mức sử dụng.  
+- Thực hành thiết lập nhiều loại ngân sách khác nhau: **Cost Budget**, **Usage Budget**, **Reservation Budget**, và **Savings Plans Budget**.  
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+#### Quản lý danh tính và truy cập (IAM)
+- Thành thạo việc tạo **người dùng (User)** và **nhóm (Group)** để quản lý quyền truy cập.  
+- Áp dụng nguyên tắc **Least Privilege** thông qua việc tạo nhóm và người dùng quản trị riêng biệt.  
+- Hiểu và thực hành việc tạo **IAM Role** để phân quyền an toàn; sử dụng tính năng **Switch Role**.  
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+#### Hạ tầng mạng (VPC & VPN)
+- Xây dựng hoàn chỉnh một **Amazon VPC** tùy chỉnh với subnet, internet gateway và route table.  
+- Cấu hình **Security Groups** làm tường lửa cho các EC2 instance.  
+- Thiết lập thành công **Site-to-Site VPN**, mô phỏng môi trường hybrid cloud.  
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+#### Điện toán đám mây (Amazon EC2)
+- Khởi tạo và quản lý thành công các instance **Windows Server** và **Amazon Linux 2**.  
+- Thực hành kết nối, quản trị cơ bản và triển khai ứng dụng quản lý người dùng.  
+- Áp dụng chiến lược **quản lý chi phí và sử dụng EC2** hiệu quả.  
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+#### Tích hợp ứng dụng an toàn
+- Hiểu rõ rủi ro bảo mật khi dùng Access Key tĩnh trong ứng dụng.  
+- Tạo thành công **IAM Role for EC2** để cấp quyền truy cập tạm thời, an toàn đến các dịch vụ khác (như S3).  
+- Kiểm chứng rằng ứng dụng trên EC2 có thể truy cập tài nguyên S3 mà không cần thông tin xác thực cứng.  

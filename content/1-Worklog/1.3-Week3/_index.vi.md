@@ -1,59 +1,56 @@
 ---
 title: "Worklog Tuần 3"
-date: 2025-09-09
-weight: 1
+date: 2025-09-22
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 3:
 
-### Mục tiêu tuần 3:
+* Học cách thiết kế **hạ tầng có tính sẵn sàng cao và khả năng mở rộng linh hoạt** trên AWS.  
+* Triển khai **Elastic Load Balancing (ELB)** và **Auto Scaling Groups (ASG)** để tự động phân phối lưu lượng và mở rộng máy chủ.  
+* Cấu hình **Amazon Route 53** cho quản lý tên miền và định tuyến DNS.  
+* Tăng độ tin cậy của hệ thống thông qua **sao lưu dữ liệu** và **giám sát**.  
+* Thực hành phân tích các chỉ số hiệu năng và phản ứng với sự kiện mở rộng.  
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+---
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Ngày | Công việc                                                                                                                                                                                                                                                                                                                                                                                                             | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                       |
+| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ---------------------------------------------------- |
+| 2    | - Tìm hiểu khái niệm về **Elastic Load Balancing (ELB)**.<br>- Hiểu các loại Load Balancer: Application, Network, và Gateway.<br>- **Thực hành:**<br>&emsp;+ Triển khai hai EC2 instance ở hai Availability Zone khác nhau.<br>&emsp;+ Tạo **Application Load Balancer (ALB)** và cấu hình Target Groups.<br>&emsp;+ Kiểm tra khả năng phân phối tải qua ứng dụng web.<br><br>→ Thành thạo quản lý lưu lượng với ELB. | 22/09/2025   | 22/09/2025      | [AWS Study Group](https://000014.awsstudygroup.com/) |
+| 3    | - Học về **Auto Scaling Groups (ASG)** và các chính sách mở rộng.<br>- **Thực hành:**<br>&emsp;+ Tạo **Launch Template** cho cấu hình EC2.<br>&emsp;+ Cấu hình **ASG** với số lượng instance tối thiểu và tối đa.<br>&emsp;+ Kiểm tra chính sách **scale-out** và **scale-in** dựa trên chỉ số CPU.<br><br>→ Triển khai mở rộng động dựa theo tải công việc.                                                          | 23/09/2025   | 23/09/2025      | [AWS Study Group](https://000015.awsstudygroup.com/) |
+| 4    | - Khám phá **Amazon Route 53** và các chính sách định tuyến DNS.<br>- **Thực hành:**<br>&emsp;+ Đăng ký tên miền hoặc tạo Hosted Zone.<br>&emsp;+ Cấu hình bản ghi **A/AAAA** và **CNAME**.<br>&emsp;+ Kết nối **Route 53** với DNS của Load Balancer.<br><br>→ Hiểu cách định tuyến tên miền và xử lý failover.                                                                                                      | 24/09/2025   | 24/09/2025      | [AWS Study Group](https://000016.awsstudygroup.com/) |
+| 5    | - Học về **sao lưu và phục hồi (backup & recovery)** trên AWS.<br>- **Thực hành:**<br>&emsp;+ Tạo **EBS snapshot** và **RDS automated backup**.<br>&emsp;+ Lưu trữ backup trong **Amazon S3** bằng **Lifecycle Policies**.<br>&emsp;+ Kiểm tra phục hồi dữ liệu từ snapshot.<br><br>→ Đảm bảo tính bền vững hệ thống qua chiến lược sao lưu tự động.                                                                  | 25/09/2025   | 25/09/2025      | [AWS Study Group](https://000017.awsstudygroup.com/) |
+| 6    | - Nâng cao khả năng quan sát với **Amazon CloudWatch** và **AWS CloudTrail**.<br>- **Thực hành:**<br>&emsp;+ Tạo **CloudWatch Alarms** theo dõi CPU, bộ nhớ và mạng.<br>&emsp;+ Theo dõi **ASG scaling events** và **ELB request metrics**.<br>&emsp;+ Sử dụng **CloudTrail** để ghi lại hoạt động người dùng và API calls.<br><br>→ Xây dựng giải pháp giám sát và audit hoàn chỉnh.                                 | 26/09/2025   | 26/09/2025      | [AWS Study Group](https://000018.awsstudygroup.com/) |
 
-### Kết quả đạt được tuần 3:
+---
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Kết quả đạt được trong tuần 3
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+#### 1. Elastic Load Balancing (ELB)
+- Triển khai và cấu hình thành công **Application Load Balancer** để phân phối lưu lượng giữa nhiều EC2 instance.  
+- Kiểm tra thành công cơ chế **load balancing và failover** thông qua bài test hiệu năng.  
+- Hiểu rõ sự khác biệt giữa **Application**, **Network**, và **Gateway Load Balancer**.  
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+#### 2. Auto Scaling Groups (ASG)
+- Tạo và kiểm thử thành công **Auto Scaling Group** bằng **Launch Template**.  
+- Áp dụng **target tracking** và **step scaling policies** dựa trên CPU utilization.  
+- Xác minh cơ chế tự động mở rộng và thay thế instance khi gặp lỗi.  
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+#### 3. Amazon Route 53
+- Cấu hình định tuyến DNS cho ứng dụng web thông qua **Route 53 Hosted Zones**.  
+- Liên kết bản ghi **Route 53** với **Load Balancer DNS name** để truy cập qua domain.  
+- Hiểu các loại **routing policies** như Simple, Weighted, và Failover.  
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+#### 4. Sao lưu và phục hồi
+- Tạo và kiểm tra **EBS snapshots** và **RDS automated backups**.  
+- Quản lý **lưu trữ backup trên S3** với **Lifecycle Management**.  
+- Phục hồi tài nguyên thành công từ snapshot để đảm bảo khả năng khôi phục thảm họa.  
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+#### 5. Giám sát và quan sát hệ thống
+- Cấu hình **CloudWatch Alarms** để phát hiện bất thường về hiệu năng.  
+- Theo dõi **sự kiện mở rộng ASG**, **chỉ số ELB requests**, và **hiệu năng RDS**.  
+- Ghi nhận hoạt động API và hành động người dùng qua **CloudTrail**, cải thiện khả năng giám sát và tuân thủ bảo mật.  

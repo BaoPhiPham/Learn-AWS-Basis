@@ -1,59 +1,38 @@
 ---
 title: "Worklog Tuần 8"
-date: 2025-09-09
-weight: 1
+date: 2025-10-26
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 8:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Tìm hiểu Cost-Optimized Architectures.
+- Cân bằng thi giữa kỳ và thực tập.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| **Ngày** | **Nhiệm vụ**                                                                                                                                                                                                                               | **Bắt đầu** | **Hoàn thành** | **Tài liệu tham khảo**                                                                                                                                                                                                                                                                     |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2        | - **Ôn thi giữa kỳ: Resilient Architectures**<br>&emsp;+ Multi-AZ, Multi-Region<br>&emsp;+ DR Strategies<br>&emsp;+ Auto Scaling, Route 53, Load Balancing<br>&emsp;+ Backup & Restore                                                     | 27/10/2025  | 27/10/2025     | [Disaster Recovery](https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-workloads-on-aws.html)<br>[Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html)                               |
+| 3        | - **Ôn thi giữa kỳ: High-Performing Architectures**<br>&emsp;+ EC2 Auto Scaling, Lambda, Fargate<br>&emsp;+ S3, EFS, EBS<br>&emsp;+ Caching, CloudFront, Global Accelerator                                                                | 28/10/2025  | 28/10/2025     | [Lambda Functions](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)<br>[CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)<br>[S3 Performance](https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html) |
+| 4        | - **Ôn thi giữa kỳ: Cost-Optimized Architectures**<br>&emsp;+ Cost Explorer, Budgets<br>&emsp;+ Savings Plans, Lifecycle Policies<br>&emsp;+ NAT Gateway Optimization, Storage Tiering<br>- Ôn tập tổng hợp AWS Well-Architected Framework | 29/10/2025  | 29/10/2025     | [Cloud Financial Management](https://aws.amazon.com/aws-cost-management/)                                                                                                                                                                                                                  |
+| 5        | - **Ôn thi tổng hợp** và rà soát lại các dịch vụ trọng tâm.                                                                                                                                                                                | 30/10/2025  | 30/10/2025     | [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html)                                                                                                                                                                                |
+| 6        | - **Thi giữa kỳ tại công ty**.                                                                                                                                                                                                             | 31/10/2025  | 31/10/2025     | —                                                                                                                                                                                                                                                                                          |
 
 ### Kết quả đạt được tuần 8:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+**1. Kiến thức AWS Solutions Architect:**
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Hoàn thành ôn tập toàn diện 4 trụ cột thiết kế kiến trúc: Security, Resilience, Performance, Cost Optimization.
+- Hiểu sâu về AWS Well-Architected Framework và cách áp dụng vào các kịch bản thực tế.
+- Nắm vững các dịch vụ trọng tâm: EC2, S3, IAM, RDS, VPC, Lambda, CloudWatch, CloudFront và cách tích hợp chúng.
+- Tổng hợp kiến thức về DR Strategies, Auto Scaling, Load Balancing, Caching, và Cost Optimization.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+**2. Quản lý thời gian & Kết quả thi:**
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Cân bằng tốt giữa việc ôn thi và theo dõi tiến độ dự án.
+- Mặc dù kết quả thi không được như mong đợi, nhưng sẵn sàng quay trở lại với dự án.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+---

@@ -1,126 +1,92 @@
 ---
 title: "Blog 1"
-date: 2025-09-09
+date: 2025-10-04
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# Bắt đầu với healthcare data lakes: Sử dụng microservices
+# **Sự gia tăng của các tác nhân tự trị: Những điều mà các nhà lãnh đạo doanh nghiệp cần biết về làn sóng AI tiếp theo**
 
-Các data lake có thể giúp các bệnh viện và cơ sở y tế chuyển dữ liệu thành những thông tin chi tiết về doanh nghiệp và duy trì hoạt động kinh doanh liên tục, đồng thời bảo vệ quyền riêng tư của bệnh nhân. **Data lake** là một kho lưu trữ tập trung, được quản lý và bảo mật để lưu trữ tất cả dữ liệu của bạn, cả ở dạng ban đầu và đã xử lý để phân tích. data lake cho phép bạn chia nhỏ các kho chứa dữ liệu và kết hợp các loại phân tích khác nhau để có được thông tin chi tiết và đưa ra các quyết định kinh doanh tốt hơn.
+Bởi Sri Elaprolu | Ngày 13 Tháng 6, 2025 | Trong các mục [Amazon Q Developer](https://aws.amazon.com/blogs/aws-insights/category/amazon-q/amazon-q-developer/), [Trí tuệ nhân tạo](https://aws.amazon.com/blogs/aws-insights/category/artificial-intelligence/), [Thực tiễn tốt nhất](https://aws.amazon.com/blogs/aws-insights/category/post-types/best-practices/), [Nổi bật](https://aws.amazon.com/blogs/aws-insights/category/featured/), [Generative AI](https://aws.amazon.com/blogs/aws-insights/category/artificial-intelligence/generative-ai/), [Tư duy lãnh đạo](https://aws.amazon.com/blogs/aws-insights/category/post-types/thought-leadership/) | [Đường dẫn cố định](https://aws.amazon.com/blogs/aws-insights/the-rise-of-autonomous-agents-what-enterprise-leaders-need-to-know-about-the-next-wave-of-ai/)
 
-Bài đăng trên blog này là một phần của loạt bài lớn hơn về việc bắt đầu cài đặt data lake dành cho lĩnh vực y tế. Trong bài đăng blog cuối cùng của tôi trong loạt bài, *“Bắt đầu với data lake dành cho lĩnh vực y tế: Đào sâu vào Amazon Cognito”*, tôi tập trung vào các chi tiết cụ thể của việc sử dụng Amazon Cognito và Attribute Based Access Control (ABAC) để xác thực và ủy quyền người dùng trong giải pháp data lake y tế. Trong blog này, tôi trình bày chi tiết cách giải pháp đã phát triển ở cấp độ cơ bản, bao gồm các quyết định thiết kế mà tôi đã đưa ra và các tính năng bổ sung được sử dụng. Bạn có thể truy cập các code samples cho giải pháp tại Git repo này để tham khảo.
+**![](/images/3-Translated-Blogs/3.1-Blog1/1.png)**
 
----
+Các tác nhân AI tự động (autonomous AI agents) đại diện cho bước tiến quan trọng tiếp theo trong lĩnh vực trí tuệ nhân tạo, vượt ra ngoài các giao diện đàm thoại để đến các hệ thống tận dụng AI để suy luận, lập kế hoạch và hoàn thành nhiệm vụ song hành cùng – hoặc thay mặt cho con người – như tổng hợp nghiên cứu, thanh toán hóa đơn, lên kế hoạch cho chuyến đi, hoặc quản lý các ứng dụng doanh nghiệp.
 
-## Hướng dẫn kiến trúc
+Việc sử dụng các tác nhân tự động đang nhanh chóng phát triển và đạt đến đỉnh cao trong việc áp dụng tại doanh nghiệp, nhờ các mô hình nền tảng tiết kiệm chi phí với khả năng lập luận tiên tiến, cơ sở hạ tầng dữ liệu an toàn và sự xuất hiện của các công cụ phát triển. Các nhà lãnh đạo doanh nghiệp đang đối mặt với những cơ hội to lớn và những thách thức đáng kể về mặt tổ chức khi các tác nhân AI này chuyển đổi từ công nghệ thử nghiệm sang cơ sở hạ tầng kinh doanh cốt lõi.
 
-Thay đổi chính kể từ lần trình bày cuối cùng của kiến trúc tổng thể là việc tách dịch vụ đơn lẻ thành một tập hợp các dịch vụ nhỏ để cải thiện khả năng bảo trì và tính linh hoạt. Việc tích hợp một lượng lớn dữ liệu y tế khác nhau thường yêu cầu các trình kết nối chuyên biệt cho từng định dạng; bằng cách giữ chúng được đóng gói riêng biệt với microservices, chúng ta có thể thêm, xóa và sửa đổi từng trình kết nối mà không ảnh hưởng đến những kết nối khác. Các microservices được kết nối rời thông qua tin nhắn publish/subscribe tập trung trong cái mà tôi gọi là “pub/sub hub”.
+### **Hiểu về các tác nhân AI tự động: vượt ra ngoài tự động hóa đơn giản**
 
-Giải pháp này đại diện cho những gì tôi sẽ coi là một lần lặp nước rút hợp lý khác từ last post của tôi. Phạm vi vẫn được giới hạn trong việc nhập và phân tích cú pháp đơn giản của các **HL7v2 messages** được định dạng theo **Quy tắc mã hóa 7 (ER7)** thông qua giao diện REST.
+Tương tự như việc lái xe tự động đã phát triển từ Mức 1 (kiểm soát hành trình) đến Mức 4 (tự động hoàn toàn trong các lĩnh vực cụ thể), mức độ “tự chủ” của các tác nhân AI cũng đang tăng lên.
 
-**Kiến trúc giải pháp bây giờ như sau:**
+**Mức 1 – Chuỗi:** Tự động hóa quy trình Robot dựa trên quy tắc (RPA), trong đó cả hành động và trình tự của chúng đều được xác định trước. Ví dụ: Trích xuất dữ liệu hóa đơn từ file PDF và nhập vào cơ sở dữ liệu.
 
-> *Hình 1. Kiến trúc tổng thể; những ô màu thể hiện những dịch vụ riêng biệt.*
+**Mức 2 – Quy trình làm việc:** Các hành động được xác định trước, nhưng trình tự có thể được quyết định động bằng các bộ định tuyến hoặc Mô hình ngôn ngữ lớn (LLMs). Ví dụ: Soạn thảo email cho khách hàng chạy các quy trình Tạo tăng cường Truy xuất (RAG) với logic phân nhánh.
 
----
+**Mức 3 – Bán tự động:** Khi được giao một mục tiêu, tác nhân có thể lập kế hoạch, thực thi và điều chỉnh chuỗi hành động bằng bộ công cụ chuyên biệt, với sự giám sát tối thiểu của con người. Ví dụ: Giải quyết các yêu cầu hỗ trợ khách hàng trên nhiều hệ thống khác nhau.
 
-Mặc dù thuật ngữ *microservices* có một số sự mơ hồ cố hữu, một số đặc điểm là chung:  
-- Chúng nhỏ, tự chủ, kết hợp rời rạc  
-- Có thể tái sử dụng, giao tiếp thông qua giao diện được xác định rõ  
-- Chuyên biệt để giải quyết một việc  
-- Thường được triển khai trong **event-driven architecture**
+**Mức 4 – Tự động hoàn toàn:** Hoạt động với rất ít hoặc không cần giám sát trong nhiều lĩnh vực, chủ động đặt mục tiêu, thích ứng với kết quả và thậm chí có thể tạo hoặc chọn công cụ của riêng mình. Ví dụ: Các tác nhân nghiên cứu chiến lược có khả năng phát hiện, tóm tắt và tổng hợp thông tin một cách độc lập.
 
-Khi xác định vị trí tạo ranh giới giữa các microservices, cần cân nhắc:  
-- **Nội tại**: công nghệ được sử dụng, hiệu suất, độ tin cậy, khả năng mở rộng  
-- **Bên ngoài**: chức năng phụ thuộc, tần suất thay đổi, khả năng tái sử dụng  
-- **Con người**: quyền sở hữu nhóm, quản lý *cognitive load*
+Tính đến quý 1 năm 2025, hầu hết các ứng dụng AI tác nhân (hệ thống AI có thể hoạt động tự động) vẫn ở Cấp độ 1 và 2, một số ít đang khám phá Cấp độ 3 trong các lĩnh vực hẹp và số lượng công cụ hạn chế (thường dưới 30). Điểm khác biệt của các tác nhân thực sự tự động là khả năng suy luận lặp đi lặp lại, đánh giá kết quả, điều chỉnh kế hoạch và theo đuổi mục tiêu mà không cần sự can thiệp liên tục của con người.
 
----
+### **Tác động kinh tế: dự báo thị trường và chuyển đổi kinh doanh**
 
-## Lựa chọn công nghệ và phạm vi giao tiếp
+Theo ước tính của [McKinsey](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier), trí tuệ nhân tạo sinh tạo (gen AI) dự báo sẽ đóng góp từ 2,6 đến 4,4 nghìn tỷ đô la Mỹ mỗi năm vào GDP toàn cầu. Điều này đang trở thành hiện thực nhờ việc sử dụng các tác nhân tự động, với [Gartner](https://www.gartner.com/en/articles/intelligent-agent-in-ai) dự báo rằng ít nhất 15% các quyết định công việc sẽ được thực hiện tự động bởi các tác nhân AI vào năm 2028, so với 0% vào năm 2024. Bản thân thị trường tác nhân AI dự kiến sẽ [đạt 52,6 tỷ đô la](https://www.marketsandmarkets.com/Market-Reports/ai-agents-market-15761548.html?gad_source=1&gbraid=0AAAAADxY7SzIPNP1hoRzTlxwgvEWX-gBz&gclid=Cj0KCQjw_JzABhC2ARIsAPe3ynrmv6gaz5kYEVUU53zfXP8Gc1nWppnfsJ93QCjcAmQbNW3BZHb-9qAaAklmEALw_wcB) vào năm 2030, phản ánh tốc độ tăng trưởng kép hàng năm khoảng 45%.
 
-| Phạm vi giao tiếp                        | Các công nghệ / mô hình cần xem xét                                                        |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Trong một microservice                   | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Giữa các microservices trong một dịch vụ | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Giữa các dịch vụ                         | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+Tất cả những con số này không chỉ phản ánh sự nhiệt tình mà còn là niềm tin ngày càng tăng của doanh nghiệp vào khả năng thực tế của AI có tính tác nhân. Các tổ chức đang thể hiện sự quan tâm đáng kể đến AI tác nhân,với [hơn 50%](https://www.deloitte.com/content/dam/assets-zone3/us/en/docs/services/consulting/2024/us-state-of-gen-ai-q4.pdf) tổ chức đã xác định đây là lĩnh vực ưu tiên trong phát triển AI sinh tạo. Dù vẫn có hoài nghi rằng liệu đây có phải chỉ là xu hướng tạm thời, nhưng bằng chứng cho thấy sự tăng trưởng này là bền vững. Các công ty đang tiến xa hơn giai đoạn thử nghiệm và triển khai các giải pháp này vào hoạt động thực tế, đạt được những lợi ích hữu hình trong ba lĩnh vực chính: cải thiện năng suất, giảm chi phí và đẩy nhanh chu kỳ đổi mới. Ví dụ:
 
----
+**Tác nhân đổi mới và nghiên cứu:** [Genentech](https://aws.amazon.com/solutions/case-studies/genentech-generativeai-case-study/), một công ty công nghệ sinh học có trụ sở tại Hoa Kỳ, đã xây dựng một giải pháp đại lý trên AWS, tự động hóa quy trình tìm kiếm thủ công tốn thời gian, cho phép các nhà khoa học của họ tập trung vào nghiên cứu có tác động cao và đẩy nhanh đổi mới khám phá thuốc. Hệ thống sử dụng các đại lý tự động có thể chia nhỏ các nhiệm vụ nghiên cứu phức tạp thành các quy trình làm việc năng động, nhiều bước. Không giống như các hệ thống tự động hóa truyền thống tuân theo các đường dẫn được xác định trước, các đại lý này điều chỉnh phương pháp tiếp cận của mình dựa trên thông tin thu thập được ở mỗi bước, truy cập và phân tích nhiều cơ sở kiến ​​thức bằng RAG và thực hiện các truy vấn phức tạp bằng cách tương tác với các API và cơ sở dữ liệu nội bộ của Genentech. Giải pháp đại lý này sẽ giúp Genentech tự động hóa phần lớn công việc thủ công cần thiết để xác thực dấu ấn sinh học trên các lĩnh vực điều trị, giảm thời gian xác định mục tiêu và đẩy nhanh đổi mới.
 
-## The pub/sub hub
+**Tác nhân năng suất tại nơi làm việc:** Amazon đã tăng tốc năng suất của nhà phát triển để hiện đại hóa ứng dụng cũ bằng cách triển khai các tác nhân sử dụng [Amazon Q Developer](https://aws.amazon.com/q/developer/). Một trong những khả năng mạnh mẽ nhất của Amazon Q Developer là tự động hóa việc nâng cấp phiên bản Java để chuyển đổi các ứng dụng Java. Năm 2024, Amazon đã tích hợp khả năng chuyển đổi Java vào hệ thống nội bộ của Amazon và di chuyển hàng chục nghìn ứng dụng sản xuất từ ​​các phiên bản Java 8 hoặc 11 cũ hơn sang Java 17. Nỗ lực này cho phép các nhà phát triển hoàn thành các nâng cấp này chỉ trong một phần nhỏ thời gian, đồng thời mang lại cả cải thiện hiệu suất và tiết kiệm chi phí trên toàn Amazon.
 
-Việc sử dụng kiến trúc **hub-and-spoke** (hay message broker) hoạt động tốt với một số lượng nhỏ các microservices liên quan chặt chẽ.  
-- Mỗi microservice chỉ phụ thuộc vào *hub*  
-- Kết nối giữa các microservice chỉ giới hạn ở nội dung của message được xuất  
-- Giảm số lượng synchronous calls vì pub/sub là *push* không đồng bộ một chiều
+**Tác nhân quy trình kinh doanh:** Công ty [Rocket Mortgage](https://aws.amazon.com/blogs/machine-learning/enabling-complex-generative-ai-applications-with-amazon-bedrock-agents/) có trụ sở tại Hoa Kỳ cần một phương pháp tiếp cận cá nhân hóa và hiệu quả hơn để điều hướng việc sở hữu nhà. Rocket đã phát triển một hệ thống hỗ trợ được hỗ trợ bởi AI sử dụng Amazon Bedrock Agents, tạo ra một nền tảng thông minh tổng hợp 10 petabyte dữ liệu tài chính và cung cấp các đề xuất thế chấp được điều chỉnh phù hợp cũng như hướng dẫn tài chính được cá nhân hóa theo thời gian thực. Kết quả là giải quyết truy vấn nhanh hơn, cải thiện độ chính xác cá nhân hóa và nâng cao trải nghiệm của khách hàng trong việc điều hướng các quy trình tài chính nhà ở phức tạp.
 
-Nhược điểm: cần **phối hợp và giám sát** để tránh microservice xử lý nhầm message.
+### **Công cụ hay đồng đội? Tương lai của sự hợp tác giữa con người và AI**
 
----
+Vượt ra ngoài các dự báo kinh tế, các tác nhân tự động thể hiện sự chuyển đổi sâu sắc trong cách cấu trúc công việc và tạo ra giá trị. Trọng tâm của sự thay đổi này là sự nổi lên của “quan hệ đối tác người – AI” — tái định nghĩa khái niệm “con người trong vòng lặp”. Cả con người và tác nhân đều có khả năng tạo ý tưởng, ra quyết định và thích ứng với dữ liệu mới, nhưng theo những cách hoàn toàn khác nhau. Con người mang đến kinh nghiệm sống, lý trí đạo đức và sáng tạo trực giác — thường dựa vào cảm xúc và sự mơ hồ. Ngược lại, các tác nhân xuất sắc trong việc thực thi không mệt mỏi, nhận dạng mẫu thống kê và đạt mục tiêu ở quy mô lớn.
 
-## Core microservice
+Câu hỏi đặt ra lúc này: Liệu các tác nhân tự động chỉ đơn thuần là công cụ, hay chúng đang phát triển thành đồng đội? Người ta có thể lập luận rằng các tác nhân vẫn là công cụ, thiếu ý thức, chủ ý hoặc trách nhiệm đạo đức. Tuy nhiên, về mặt chức năng, khả năng hành động tự chủ, duy trì các mục tiêu bền vững và phối hợp với các tác nhân khác của chúng mở ra một thực tế vận hành mới, nơi chúng hành xử như những đồng đội. Mặc dù bản thân các tác nhân thiếu tính chủ động về mặt đạo đức, nhưng hậu quả từ hành động của họ thường thể hiện hành vi đạo đức - hành vi được định hình bởi các kiến ​​trúc sư con người, những người thiết kế mục tiêu, ràng buộc và rào cản đạo đức của họ. Câu hỏi quan trọng mà chúng ta cần suy ngẫm: Con người vẫn đóng góp giá trị không thể thay thế cho các nhiệm vụ nhận thức ở đâu? Câu trả lời sẽ ngày càng phụ thuộc vào bối cảnh. Trong các lĩnh vực có rủi ro cao như chăm sóc sức khỏe, diễn giải pháp lý hoặc hoạch định chính sách - khả năng phán đoán, sự đồng cảm và lý luận đạo đức của con người vẫn không thể thay thế. Trong các lĩnh vực như hậu cần hoặc tự động hóa CNTT - giám sát, xử lý ngoại lệ và thiết kế hệ thống vẫn sẽ phụ thuộc rất nhiều vào chuyên môn của con người.
 
-Cung cấp dữ liệu nền tảng và lớp truyền thông, gồm:  
-- **Amazon S3** bucket cho dữ liệu  
-- **Amazon DynamoDB** cho danh mục dữ liệu  
-- **AWS Lambda** để ghi message vào data lake và danh mục  
-- **Amazon SNS** topic làm *hub*  
-- **Amazon S3** bucket cho artifacts như mã Lambda
+Chúng ta sẽ có sự tái cân bằng các vai trò, trong đó con người tập trung vào việc giám sát các quy trình làm việc phức tạp, định hình mục tiêu và đảm bảo kết quả có trách nhiệm. Phát triển kỹ năng sẽ trở nên thiết yếu vì thành công tại nơi làm việc ngày càng phụ thuộc vào kiến ​​thức của tác nhân - khả năng giám sát, cộng tác và chỉ đạo chiến lược các nhóm tác nhân, giống như làm việc với các đồng đội con người ngày nay. Mặc dù điều này có thể dẫn đến sự xuất hiện của một số vai trò mới, đặc biệt là trong quản trị AI, nhưng nó thường liên quan đến sự phát triển của các vai trò hiện có. Ví dụ: các trưởng nhóm hỗ trợ khách hàng có thể giám sát các hệ thống dịch vụ đa tác nhân, và các nhà phân tích kinh doanh cũng có thể là người đánh giá kết quả AI. Thách thức đối với các doanh nghiệp là xây dựng các hệ thống, chính sách và văn hóa nơi hình thức hợp tác mới này có thể phát triển mạnh.
 
-> Chỉ cho phép truy cập ghi gián tiếp vào data lake qua hàm Lambda → đảm bảo nhất quán.
+### **Đạo đức trong thế giới của các tác nhân tự động**
 
----
+Việc áp dụng thành công các tác nhân tự động đòi hỏi sự chú trọng đến quản trị và đạo đức. Khi các tác nhân AI đảm nhiệm nhiều trách nhiệm ra quyết định hơn, tổ chức phải xây dựng hướng dẫn đạo đức rõ ràng — đặc biệt trong các lĩnh vực liên quan đến dữ liệu khách hàng, tài chính hoặc hoạt động nhạy cảm. Điều này thực sự quan trọng là khoảng cách kỳ vọng: Người dùng thường đòi hỏi sự hoàn hảo từ công nghệ, trong trường hợp này là các tác nhân AI, trong khi chấp nhận sự không hoàn hảo ở con người. Tiêu chuẩn cao này đối với các tác nhân AI có thể làm xói mòn niềm tin ngay cả khi các tác nhân mắc lỗi ở quy mô nhỏ hơn nhiều so với con người. [Khả năng giải thích](https://royalsocietypublishing.org/doi/10.1098/rsta.2020.0363) và diễn giải đóng vai trò then chốt để thu hẹp khoảng cách này. Con người có nhiều khả năng chấp nhận một quyết định của AI nếu nó đi kèm với một lời giải thích mô phỏng lý luận và các nguyên tắc đạo đức của con người.
 
-## Front door microservice
+Hai yếu tố quan trọng ở đây là **trách nhiệm** và **quyền riêng tư**, khi mức độ tự chủ tăng lên.
 
-- Cung cấp API Gateway để tương tác REST bên ngoài  
-- Xác thực & ủy quyền dựa trên **OIDC** thông qua **Amazon Cognito**  
-- Cơ chế *deduplication* tự quản lý bằng DynamoDB thay vì SNS FIFO vì:
-  1. SNS deduplication TTL chỉ 5 phút
-  2. SNS FIFO yêu cầu SQS FIFO
-  3. Chủ động báo cho sender biết message là bản sao
+**Trách nhiệm** (ai chịu trách nhiệm): Khi tác nhân tiến hóa từ công cụ thành đồng đội, khái niệm về trách nhiệm cũng sẽ tiến hóa — không bị loại bỏ mà được phân bổ lại (chúng ta sẽ không bao giờ nói rằng tác nhân AI “chịu trách nhiệm”). Doanh nghiệp cần một khung chia sẻ trách nhiệm, trong đó mỗi bên chịu trách nhiệm cho phần hệ thống mà họ kiểm soát. Khi quyền tự chủ của tác nhân tăng lên, "tổ hợp trách nhiệm giải trình" này càng trở nên quan trọng hơn — và phải được định nghĩa và ghi chép rõ ràng, chẳng hạn như thông qua ma trận Trách nhiệm, Có trách nhiệm, Được tham vấn và Được thông báo (RACI) hoặc chính sách quản trị. Ví dụ:
 
----
+* Kỹ sư ML chịu trách nhiệm đảm bảo mô hình được tinh chỉnh với dữ liệu khách quan
+* Các nhóm phát triển và MLOps chịu trách nhiệm thiết lập quyền truy cập dữ liệu chính xác và tích hợp các biện pháp bảo vệ
+* Chủ sản phẩm và nhóm kinh doanh chịu trách nhiệm phê duyệt giải pháp sau khi kiểm thử kỹ lưỡng
 
-## Staging ER7 microservice
+Khả năng truy xuất nguồn gốc sẽ là yếu tố then chốt để đảm bảo có thể phân tích nguyên nhân gốc rễ khi tác nhân không hoạt động như mong muốn.
 
-- Lambda “trigger” đăng ký với pub/sub hub, lọc message theo attribute  
-- Step Functions Express Workflow để chuyển ER7 → JSON  
-- Hai Lambda:
-  1. Sửa format ER7 (newline, carriage return)
-  2. Parsing logic  
-- Kết quả hoặc lỗi được đẩy lại vào pub/sub hub
+**Quyền riêng tư** (ai được xem dữ liệu của tôi): Mặc dù các tác nhân tự động kế thừa các biện pháp kiểm soát quyền riêng tư truyền thống như quyền truy cập dựa trên IAM, nhưng hành vi linh hoạt của chúng lại mang đến những rủi ro mới. Các tác nhân có thể đưa ra quyết định theo thời gian thực, tổng hợp dữ liệu trên nhiều bối cảnh và có khả năng tái sử dụng thông tin theo những cách vi phạm các nguyên tắc như giảm thiểu dữ liệu và giới hạn mục đích theo các quy định như Quy định Bảo vệ Dữ liệu Chung (GDPR) tại Liên minh Châu Âu. Doanh nghiệp phải vượt ra ngoài các biện pháp kiểm soát truy cập tĩnh—nhúng các rào cản nhận biết ngữ cảnh, giảm thiểu thời gian chạy và khả năng truy xuất nguồn gốc để đảm bảo các tác nhân hoạt động trong phạm vi quyền riêng tư.
 
----
+### **Yêu cầu cấp thiết của lãnh đạo: Vai trò của CIO như người thúc đẩy đổi mới tác nhân AI**
 
-## Tính năng mới trong giải pháp
+Khi các tác nhân AI tự động làm mờ ranh giới giữa công cụ và đồng đội, doanh nghiệp sẽ cần phải suy nghĩ lại một cách cơ bản về cách họ quản lý và cộng tác với các tác nhân này. Trong sự thay đổi này, Giám đốc Thông tin (CIO) có vị thế độc nhất để phát triển thành người điều phối chính về giá trị tác nhân của doanh nghiệp.
 
-### 1. AWS CloudFormation cross-stack references
-Ví dụ *outputs* trong core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+Có một ví von phổ biến rằng bộ phận CNTT sẽ “[trở thành bộ phận nhân sự của các tác nhân AI](https://fortune.com/2025/01/09/nvidia-ceo-jensen-huangt-take-over-hr-ai-agents/).” Mặc dù điều này có thể được đơn giản hóa quá mức, nhưng nó gợi ý về một tương lai mà các CIO không chỉ chịu trách nhiệm triển khai công nghệ mà còn quản lý, điều phối và quản lý đội ngũ tác nhân tự động trên toàn tổ chức. Những triển khai thành công nhất sẽ trao quyền cho các bộ phận — tiếp thị, vận hành, tài chính — để điều chỉnh các tác nhân theo nhu cầu của họ trong khi hoạt động trong các rào cản chung về quản trị, bảo mật và tính toàn vẹn dữ liệu.
+
+Đây chính là lúc vai trò của CIO trở nên quan trọng — không phải là người gác cổng, mà là người tạo điều kiện cho sự đổi mới tác nhân phi tập trung. Dưới đây là một số hành động chính mà các CIO nên cân nhắc thực hiện để trở thành người tạo điều kiện cho sự đổi mới tác nhân trong tổ chức của mình:
+
+1. **Xây dựng lộ trình chiến lược do doanh nghiệp dẫn dắt cho việc triển khai tác nhân AI**, bắt đầu từ tự động hóa cơ bản và dần tiến tới hệ thống tự chủ cao hơn — nhưng đảm bảo lộ trình này bao gồm khung quản trị và cấu trúc trách nhiệm rõ ràng ngay từ đầu.
+2. **Hãy định vị bản thân là người điều phối chính trong hợp tác người – hợp tác AI**, tập trung vào việc tích hợp các tác nhân như đồng đội thay vì công cụ, đồng thời thúc đẩy thay đổi văn hóa và phát triển kỹ năng cần thiết trên toàn tổ chức.
+3. **Thiết lập các biện pháp kiểm soát bảo mật và quyền riêng tư vững chắc**, vượt ra ngoài phương pháp truyền thống, được thiết kế riêng cho bản chất động của các tác nhân tự động.
+4. Và cuối cùng, và có lẽ quan trọng nhất, **cân bằng giữa đổi mới và kiểm soát** bằng cách cho phép các phòng ban áp dụng AI phi tập trung, đồng thời duy trì tiêu chuẩn và biện pháp bảo vệ nhất quán.
+
+### **Tìm hiểu thêm:**
+
+[Liên hệ với chúng tôi](https://aws.amazon.com/contact-us/) để tìm hiểu thêm về việc đánh giá xem tổ chức của bạn đã được thiết lập để làm việc với các tác nhân tự động như những đồng đội hay chưa, hoặc nếu bạn muốn tìm hiểu sâu hơn về phát triển kỹ năng và mức độ rủi ro cho các kế hoạch AI tác nhân của mình.
+
+Tìm hiểu thêm về [Trung tâm đổi mới GenAI](https://aws.amazon.com/ai/generative-ai/innovation-center/) và cách chúng tôi đang thúc đẩy việc áp dụng AI có tính tác nhân trong các tổ chức.
+
+Xin gửi lời cảm ơn đến những người đóng góp cho bài viết:Shuja Sohrawardy (Quản lý cấp cao, Chiến lược GenAI, AWS) và Anurag Bhagat (Chuyên gia chiến lược GenAI cấp cao, AWS).
+
+|                                                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](/images/3-Translated-Blogs/3.1-Blog1/2.png) | **Sri Elaprolu**  Sri Elaprolu là một chuyên gia công nghệ hàng đầu với hơn 25 năm kinh nghiệm trong lĩnh vực trí tuệ nhân tạo (AI), học máy (machine learning) và kỹ thuật phần mềm. Là Giám đốc Trung tâm Đổi mới Sáng tạo Trí tuệ Nhân tạo AWS (AWS Generative AI Innovation Center), Sri Elaprolu dẫn dắt một đội ngũ các nhà khoa học và kỹ sư ML toàn cầu, áp dụng những tiến bộ mới nhất trong AI tạo sinh để giải quyết những thách thức phức tạp cho doanh nghiệp và khu vực công. |

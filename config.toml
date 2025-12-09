@@ -1,6 +1,7 @@
-baseURL = "https://thienluhoan.github.io/workshop-template/"
+baseURL = "https://sharonng1029.github.io/fcj-fall2025-internship-report/"
 relativeURLs = true
 canonifyURLs = true
+publishDir = "public"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
@@ -15,7 +16,7 @@ home = [ "HTML", "RSS", "JSON"]
   # Git hub repo link
   editURL = ""
   description = ""
-  author = "thienlh@thienlu.com"
+  author = "ngannnkse182088@fpt.edu.vn"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false

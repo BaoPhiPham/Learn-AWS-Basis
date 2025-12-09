@@ -1,57 +1,39 @@
 ---
 title: "Week 9 Worklog"
-date: 2025-09-09
-weight: 1
+date: 2025-11-02
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+### Week 9 Goals:
 
-### Week 9 Objectives:
+- Business analysis.
+- Write the project Proposal.
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Tasks for this week:
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| **Day** | **Task**                                                                                                                                                | **Start**  | **Finish** | **References**         |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | ---------------------- |
+| 2       | - Analyze User Stories (Admin, Student).<br>- Identify Core Features: Student CRUD, Chat, Ranking.<br>- Create detailed Use Case list.                  | 03/11/2025 | 03/11/2025 | —                      |
+| 3       | - Write Proposal: Problem Statement & Solution.<br>- Estimate costs using **AWS Pricing Calculator**.<br>- Analyze benefits of Serverless architecture. | 04/11/2025 | 04/11/2025 | AWS Pricing Calculator |
+| 4       | - Draw Business Flowcharts (Login flow, Submission flow).<br>- Design ERD for DynamoDB Schema.<br>- Identify required API endpoints.                    | 05/11/2025 | 05/11/2025 | —                      |
+| 5       | - Team Proposal Review.<br>- Finalize Tech Stack: DynamoDB, Lambda, S3, Cognito, SES...<br>- Assign responsibilities to team members.                   | 06/11/2025 | 06/11/2025 | —                      |
+| 6       | - Finalize Proposal document.                                                                                                                           | 07/11/2025 | 07/11/2025 | —                      |
 
+### Week 9 Outcomes:
 
-### Week 9 Achievements:
+**1. Completed Proposal Document:**
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Proposal includes 3 main sections: Problem Statement, Solution Architecture, Cost Estimation.
+- Operational costs calculated in detail using AWS Pricing Calculator, proving Serverless is more cost-efficient than traditional servers.
+- Tech stack proposed: DynamoDB (Database), Lambda (Backend Logic), API Gateway (REST API), Cognito (Authentication), S3 (Frontend Hosting).
 
-* Successfully created and configured an AWS Free Tier account.
+**2. Detailed System Analysis:**
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+- **Use Cases & User Stories:** Fully listed for Admin, Lecturer, and Student roles.
+- **Business Flowcharts:** Created for Login (Cognito) and Assignment Submission flow.
+- **Database Schema:** Designed DynamoDB ERD following Single Table Design.
+- **API Endpoints:** Identified all required endpoints for frontend integration.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+---

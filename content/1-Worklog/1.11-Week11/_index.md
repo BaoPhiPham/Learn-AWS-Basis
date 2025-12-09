@@ -1,57 +1,52 @@
 ---
 title: "Week 11 Worklog"
-date: 2025-09-09
-weight: 2
+date: 2025-11-16
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+### Week 11 Goals:
 
-### Week 11 Objectives:
+- Setup Frontend Project.
+- Integrate Authentication (Cognito).
+- Join DevOps event.
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Tasks for this week:
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| **Day** | **Task**                                                                                                                  | **Start**  | **Finish** | **References**            |
+| ------- | ------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | ------------------------- |
+| 2       | - **EVENT:** Attend AWS Cloud Mastery Series #2 – DevOps on AWS.<br>- Explore CI/CD (CodePipeline).                       | 18/11/2025 | 18/11/2025 | Event Link                |
+| 3       | - Design Database Schema (DynamoDB JSON).<br>- Send schema to Backend team.                                               | 19/11/2025 | 19/11/2025 | DynamoDB Best Practices   |
+| 4       | - Initialize React + TypeScript project (Vite).<br>- Configure Tailwind, ESLint, and Git repo.                            | 20/11/2025 | 20/11/2025 | Vite Guide<br>TS Handbook |
+| 5       | - Build Login Page UI.<br>- Add validation using React Hook Form + Zod.                                                   | 21/11/2025 | 21/11/2025 | RHF Docs<br>Zod Docs      |
+| 6       | - Configure **Amazon Cognito** (User Pool).<br>- Integrate Amplify Auth.<br>- Successfully connect Login API (JWT Token). | 22/11/2025 | 22/11/2025 | Amplify Auth              |
 
+### Week 11 Outcomes:
 
-### Week 11 Achievements:
+**1. DevOps Knowledge:**
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Learned CI/CD tools: **CodePipeline, CodeBuild, CodeDeploy**.
+- Understood automated deployment workflows.
+- Planned to implement CI/CD for deploying Frontend to S3 + CloudFront.
 
-* Successfully created and configured an AWS Free Tier account.
+**2. Frontend Project Setup:**
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+- Successfully setup **React + TypeScript + Vite**.
+- Configured **Tailwind CSS** and **ESLint**.
+- Created Git repository with branch standards (main, develop, feature).
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+**3. Authentication Development:**
 
-* Used AWS CLI to perform basic operations such as:
+- Built Login UI with validation (RHF + Zod).
+- Configured Cognito User Pool (password policy, email verification).
+- Integrated Amplify Auth.
+- Successfully authenticated Login API and retrieved JWT token.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+**4. Security Knowledge:**
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Understood Authentication flow: React ↔ Cognito ↔ Backend (Lambda + API Gateway).
+- Applied Secure Architecture Best Practices.
+- Learned how to handle JWT token securely.
+
+---

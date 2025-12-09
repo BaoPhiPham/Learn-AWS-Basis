@@ -1,57 +1,43 @@
 ---
 title: "Week 10 Worklog"
-date: 2025-09-09
-weight: 2
+date: 2025-11-09
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+### Week 10 Goals:
 
-### Week 10 Objectives:
+- Submit Proposal.
+- Design UI/UX & Explore AI/ML.
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Tasks for this week:
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| **Day** | **Task**                                                                                              | **Start**  | **Finish** | **References**                  |
+| ------- | ----------------------------------------------------------------------------------------------------- | ---------- | ---------- | ------------------------------- |
+| 2       | - **Submit Project Proposal.**                                                                        | 10/11/2025 | 10/11/2025 | —                               |
+| 3       | - Draft UI Wireframes (Login, Dashboard, Chat).<br>- Design Mobile Responsive Layout.                 | 11/11/2025 | 11/11/2025 | —                               |
+| 4       | - Choose UI Library: **Tailwind CSS + Chakra UI v3**.<br>- Setup test environment.                    | 12/11/2025 | 12/11/2025 | Tailwind Docs<br>Chakra UI Docs |
+| 5       | - **EVENT:** Attend AWS Cloud Mastery Series #1 – AI/ML & Generative AI.                              | 13/11/2025 | 13/11/2025 | Event Link                      |
+| 6       | - Propose new Ranking/Suggestion feature using Amazon Personalize.<br>- Study **Amazon Personalize**. | 14/11/2025 | 14/11/2025 | Amazon Personalize              |
 
+### Week 10 Outcomes:
 
-### Week 10 Achievements:
+**1. Proposal Submission Completed:**
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Fully submitted final Proposal on time.
+- Received positive feedback from mentor regarding Serverless architecture and cost estimation.
 
-* Successfully created and configured an AWS Free Tier account.
+**2. UI/UX Design Completed:**
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+- Finished **Wireframe** for Login, Dashboard, and Chat interfaces.
+- Designed **Responsive UI** for mobile accessibility.
+- Finalized frontend stack: **Tailwind CSS + Chakra UI v3**.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+**3. Expanded AI/ML Knowledge:**
 
-* Used AWS CLI to perform basic operations such as:
+- Attended AWS Cloud Mastery Series #1, understanding SageMaker, Bedrock, Personalize.
+- Explored **Amazon Personalize** to propose intelligent Ranking/Suggestion features.
+- Learned how Personalize integrates with Lambda and DynamoDB.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+---

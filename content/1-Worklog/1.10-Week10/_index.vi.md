@@ -1,59 +1,43 @@
 ---
 title: "Worklog Tuần 10"
-date: 2025-09-09
-weight: 2
+date: 2025-11-09
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Nộp Proposal.
+- Thiết kế UI/UX & Tìm hiểu AI/ML.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| **Ngày** | **Nhiệm vụ**                                                                                                    | **Bắt đầu** | **Hoàn thành** | **Tài liệu tham khảo**                                                                       |
+| -------- | --------------------------------------------------------------------------------------------------------------- | ----------- | -------------- | -------------------------------------------------------------------------------------------- |
+| 2        | - **Nộp Proposal Project.**                                                                                     | 10/11/2025  | 10/11/2025     | —                                                                                            |
+| 3        | - Phác thảo Wireframe UI (Login, Dashboard, Chat).<br>- Thiết kế Responsive cho Mobile.                         | 11/11/2025  | 11/11/2025     | —                                                                                            |
+| 4        | - Chọn UI Library: **Tailwind CSS + Chakra UI v3**.<br>- Cài đặt môi trường thử nghiệm.                         | 12/11/2025  | 12/11/2025     | [Tailwind Docs](https://tailwindcss.com/) <br> [Chakra UI Docs](https://chakra-ui.com/docs/) |
+| 5        | - **EVENT:** Tham gia AWS Cloud Mastery Series #1 – AI/ML & Generative AI.                                      | 13/11/2025  | 13/11/2025     | [AWS Cloud Mastery Series #1](../../4-eventparticipated/4.3-event3/)                         |
+| 6        | - Đề xuất thêm tính năng Ranking/Suggestion dùng Personalize vào dự án. <br> - Tìm hiểu **Amazon Personalize**. | 14/11/2025  | 14/11/2025     | [Amazon Personalize](https://aws.amazon.com/personalize/)                                    |
 
 ### Kết quả đạt được tuần 10:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+**1. Hoàn thành nộp Proposal:**
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Đã nộp tài liệu Proposal Project đầy đủ và đúng hạn.
+- Nhận được phản hồi tích cực từ mentor về phần kiến trúc Serverless và dự toán chi phí.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+**2. Thiết kế giao diện người dùng:**
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Hoàn thành **Wireframe** cho 3 màn hình chính: Login (đăng nhập với Cognito), Dashboard (tổng quan hệ thống), Chat (giao tiếp real-time).
+- Thiết kế **Responsive Layout** tương thích Mobile để sinh viên có thể truy cập mọi lúc mọi nơi.
+- Quyết định stack Frontend: **Tailwind CSS** (styling nhanh) + **Chakra UI v3** (component library đẹp, accessibility tốt).
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+**3. Mở rộng kiến thức AI/ML trên AWS:**
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+- Tham gia **AWS Cloud Mastery Series #1** về AI/ML & Generative AI, nắm được các dịch vụ: SageMaker, Bedrock, Personalize.
+- Nghiên cứu **Amazon Personalize** để đề xuất thêm tính năng Ranking/Suggestion thông minh cho hệ thống (gợi ý bài tập phù hợp với từng sinh viên).
+- Hiểu cách Personalize tích hợp với Lambda và DynamoDB để xây dựng recommendation engine.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+---
